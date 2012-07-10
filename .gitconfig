@@ -1,0 +1,19 @@
+[user]
+    name = Sasha Matijasic
+    email = sasha@selectnull.com
+[alias]
+    st = status
+    ci = commit
+[diff]
+    tool = diffmerge
+[difftool "diffmerge"]
+    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = diffmerge
+[mergetool "diffmerge"]
+    cmd = diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    trustexitcode = true
+
+[color]
+    ui = true
+
