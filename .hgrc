@@ -1,9 +1,18 @@
 [ui]
 username = Sasha Matijasic <sasha@selectnull.com>
 
+[diff]
+git = True
+
 [extensions]
 hgext.convert=
 hgext.extdiff=
+color= 
+pager=
+
+[pager]
+pager=LESS='FSRX' less
+ignore=version, help, update, serve, record
 
 [extdiff]
 cmd.diffmerge = /usr/bin/diffmerge
