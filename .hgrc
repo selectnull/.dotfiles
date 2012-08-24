@@ -9,6 +9,7 @@ hgext.convert=
 hgext.extdiff=
 color= 
 pager=
+graphlog=
 
 [pager]
 pager=LESS='FSRX' less
