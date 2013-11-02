@@ -10,3 +10,5 @@ function cd () {
     builtin cd "${@:1:$n-1}" $(sed -e$e -e$e -e$e <<< "${!n}");
   fi
 }
+
+. ~/bin/ave.sh
