@@ -11,4 +11,8 @@ function cd () {
   fi
 }
 
-. ~/bin/ave.sh
+function curle () {
+    curl $@; echo
+}
+
+. ~/Library/Python/2.7/bin/ave.sh
