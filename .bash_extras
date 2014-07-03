@@ -27,13 +27,12 @@ fi
 
 alias jsontool='python -m json.tool'
 function findp() {
-    # find . -type f -name "*$@*" | grep -v '\.git'
-
-    # the above find works but has its problems, it's hard to ignore
-    # .git, .hg, .svn, .pyc, .swp and bunch of all other files
-    # ack solves that problem perfectly, but i should fall back
-    # to find if ack is not installed
-    ack -f | ack -i "$@"
+    if command -v ack > /dev/null 2>&1;
+    then
+        ack -f | ack -i "$@"
+    else
+        find . -type f -name "*$@*"
+    fi
 }
 function vip() {
     vi `findp "$@"`
