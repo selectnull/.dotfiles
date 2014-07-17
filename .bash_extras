@@ -26,6 +26,7 @@ then
 fi
 
 alias jsontool='python -m json.tool'
+
 function findp() {
     if command -v ack > /dev/null 2>&1;
     then
@@ -34,8 +35,7 @@ function findp() {
         find . -type f -name "*$@*"
     fi
 }
+
 function vip() {
     vi `findp "$@"`
 }
-
-. ~/Library/Python/2.7/bin/ave.sh
