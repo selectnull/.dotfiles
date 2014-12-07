@@ -12,7 +12,7 @@ function cd () {
 }
 
 function curle () {
-    curl $@; echo
+    curl "$@"; echo
 }
 
 if [ `uname -s` = "Darwin" ]
