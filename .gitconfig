@@ -8,8 +8,10 @@
     co = checkout
 
 [diff]
-    tool = diffmerge
-
+    tool = icdiff
+    guitool = diffmerge
+[difftool "icdiff"]
+    cmd = icdiff \"$LOCAL\" \"$REMOTE\"
 [difftool "diffmerge"]
     cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 
