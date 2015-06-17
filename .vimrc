@@ -93,7 +93,7 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 " CtrlSF config
-let g:ctrlsf_position = 'below'
+let g:ctrlsf_position = 'bottom'
 
 " Syntastic config
 let g:syntastic_always_populate_loc_list = 1
