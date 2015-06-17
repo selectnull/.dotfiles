@@ -75,6 +75,19 @@ set shortmess+=I
 :imap jk <Esc>
 
 " colorscheme options
+
+function! TryColorScheme(colorschemes)
+    " takes a list of names of color schemes
+    " and sets the first existing one
+
+    for c in a:colorschemes
+        try
+            execute "colorscheme " . c
+            return
+        endtry
+    endfor
+endfunction
+
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
@@ -82,9 +95,9 @@ endif
 set background=dark
 let g:molokai_original = 1
 let g:rehash256 = 1
-colorscheme molokai
 let g:solarized_termcolors=256
-" colorscheme solarized
+
+call TryColorScheme(['molokai', 'solarized', 'delek'])
 
 " CtrlP config
 let g:ctrlp_custom_ignore = {
