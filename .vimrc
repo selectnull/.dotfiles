@@ -84,6 +84,8 @@ function! TryColorScheme(colorschemes)
         try
             execute "colorscheme " . c
             return
+        catch
+            " do nothin, try next in loop
         endtry
     endfor
 endfunction
@@ -97,7 +99,7 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 let g:solarized_termcolors=256
 
-call TryColorScheme(['molokai', 'solarized', 'delek'])
+call TryColorScheme(['foo', 'solarized', 'delek'])
 
 " CtrlP config
 let g:ctrlp_custom_ignore = {
