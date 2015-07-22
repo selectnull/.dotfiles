@@ -216,9 +216,11 @@ set statusline+=%{StatuslineTrailingSpaceWarning()}
 set statusline+=%*
 
 " Syntastic Check
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+if exists("*SyntasticStatuslineFlag")
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+endif
 
 set statusline+=%=          " left/right separator
 set statusline+=%l:%c       " cursor position
