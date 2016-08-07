@@ -114,6 +114,7 @@ let g:ctrlp_custom_ignore = {
 
 " CtrlSF config
 let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_default_root = 'project'
 
 " Syntastic config
 let g:syntastic_always_populate_loc_list = 1
