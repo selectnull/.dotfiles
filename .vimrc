@@ -238,3 +238,5 @@ set laststatus=2
 
 " file types
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+autocmd BufNewFile,BufNew,BufRead *.md setlocal textwidth=72
