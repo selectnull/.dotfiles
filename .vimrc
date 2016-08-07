@@ -108,7 +108,7 @@ call TryColorScheme(['PaperColor', 'molokai', 'solarized', 'delek'])
 
 " CtrlP config
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](\.git|\.hg|\.svn|htmlcov|build|_build)$',
+    \ 'dir':  '\v[\/](\.git|\.hg|\.svn|htmlcov|build|_build|node_modules|bower_components)$',
     \ 'file': '\v\.(so|pyc)$',
     \ }
 
