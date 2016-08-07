@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # make cd .. work like cd ../.., cd ... = cd ../../..
-function cd () {
+cd () {
   local -ri n=${#*};
   if [ $n -eq 0 -o -d "${!n}" -o "${!n}" == "-" ]; then
     builtin cd "$@";
@@ -11,15 +11,15 @@ function cd () {
   fi
 }
 
-function curle () {
+curle () {
     curl "$@"; echo
 }
 
-if [ `uname -s` = "Darwin" ]
+if [ "$(uname -s)" = "Darwin" ]
 then
     alias ll='ls -alFhG'
     alias ls='ls -lFhG'
-elif [ `uname -s` = "Linux" ]
+elif [ "$(uname -s)" = "Linux" ]
 then
     alias ls='ls -lhv --group-directories-first --color=auto'
     alias ll='ls -alFh --group-directories-first --color=auto'
@@ -27,7 +27,7 @@ fi
 
 alias jsontool='python -m json.tool'
 
-function findp() {
+findp () {
     if command -v ack > /dev/null 2>&1;
     then
         ack -f | ack -i "$@"
@@ -36,6 +36,17 @@ function findp() {
     fi
 }
 
-function vip() {
-    vi `findp "$@"`
+vip () {
+    vi $(findp "$@")
+}
+
+mkcd () {
+    mkdir -p "$1" && cd "$1"
+}
+
+vimod () {
+    modfiles=$(git ls-files -m)
+    [[ -n "$modfiles" ]] && vim $modfiles
+}
+
 }
