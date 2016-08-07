@@ -61,8 +61,13 @@ endfunction
 :nnoremap <leader>e :edit<space>
 :nnoremap <leader>d :bd<CR>
 :nnoremap <leader>q :quit<CR>
-:nnoremap <leader>a :CtrlSF
+:nnoremap <leader>a :CtrlSF<space>
+
 :nnoremap <leader><tab> <C-w><C-w>
+:nnoremap <leader>j <C-w>j
+:nnoremap <leader>k <C-w>k
+:nnoremap <leader>h <C-w>h
+:nnoremap <leader>l <C-w>l
 
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
