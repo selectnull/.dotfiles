@@ -7,12 +7,15 @@ https://github.com/tomasr/molokai.git
 https://github.com/NLKNguyen/papercolor-theme.git
 https://github.com/vim-scripts/rest.vim.git
 https://github.com/rust-lang/rust.vim.git
+https://github.com/junegunn/seoul256.vim.git
 https://github.com/shawncplus/skittles_berry.git
 https://github.com/ervandew/supertab.git
-https://github.com/scrooloose/syntastic
+https://github.com/scrooloose/syntastic.git
 https://github.com/tomtom/tcomment_vim.git
+https://github.com/leafgarland/typescript-vim.git
 https://github.com/tpope/vim-capslock.git
 https://github.com/altercation/vim-colors-solarized.git
 https://github.com/dbakker/vim-projectroot.git
 https://github.com/tpope/vim-repeat.git
 https://github.com/tpope/vim-surround.git
+https://github.com/wellsjo/wellsokai.vim.git
