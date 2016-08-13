@@ -48,5 +48,3 @@ vimod () {
     modfiles=$(git ls-files -m)
     [[ -n "$modfiles" ]] && vim $modfiles
 }
-
-}
