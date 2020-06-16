@@ -26,6 +26,8 @@ then
 fi
 
 alias jsontool='python -m json.tool'
+alias e=emacs
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 findp () {
     if command -v ack > /dev/null 2>&1;
