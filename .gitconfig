@@ -8,25 +8,39 @@
     co = checkout
     slog = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     diffmerge = difftool --tool=diffmerge
+    df = difftool --no-prompt
 
 [diff]
     tool = icdiff
-    guitool = diffmerge
+    guitool = p4merge
 [difftool "icdiff"]
     cmd = icdiff \"$LOCAL\" \"$REMOTE\"
-[difftool "diffmerge"]
-    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+    pager = less -rFX
+[difftool "p4merge"]
+    cmd = "/Applications/p4merge.app/Contents/Resources/launchp4merge $BASE $LOCAL $REMOTE $MERGED"
 
 [merge]
-    tool = diffmerge
-[mergetool "diffmerge"]
-    cmd = diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = "/Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED"
     trustexitcode = true
 
 [color]
     ui = true
 
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/local/bin/vim
+    pager = less -rFX
+    ignoreCase = false
 [push]
     default = simple
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[pager]
+    difftool = true
+[pull]
+    ff = only
