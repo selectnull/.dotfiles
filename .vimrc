@@ -243,5 +243,9 @@ set laststatus=2
 
 " file types
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
 autocmd BufNewFile,BufNew,BufRead *.md setlocal textwidth=72
+
+autocmd BufNewFile,BufNew,BufRead *.py setlocal softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufNew,BufRead *.js setlocal softtabstop=2 shiftwidth=2
+autocmd BufNewFile,BufNew,BufRead *.ts setlocal softtabstop=2 shiftwidth=2
+autocmd BufNewFile,BufNew,BufRead *.html setlocal softtabstop=2 shiftwidth=2
