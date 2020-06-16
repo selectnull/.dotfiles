@@ -69,6 +69,10 @@ endfunction
 :nnoremap <leader>h <C-w>h
 :nnoremap <leader>l <C-w>l
 
+:nnoremap <leader>ss :SyntasticToggleMode<cr>
+:nnoremap <leader>sn :lnext<cr>
+:nnoremap <leader>sp :lprev<cr>
+
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
 
@@ -122,6 +126,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_checkers = []
+let g:syntastic_sh_shellcheck_args = "-x"
 
 " respace function sets unix line endings, removes trailing whitespace,
 " and converts TABs to spaces
