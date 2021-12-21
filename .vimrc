@@ -3,7 +3,11 @@ let mapleader=" "
 :set guioptions-=T
 :set guioptions-=m
 
-:set mouse=a
+" Disable mouse
+:set mouse=
+if !has('nvim')
+    :set ttymouse=
+endif
 
 :set ai ts=4 sts=4 et sw=4
 " Always cd to the current file's directory
